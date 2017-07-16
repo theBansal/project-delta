@@ -1,6 +1,7 @@
 # Fix your variable names
 
 import random
+import getch
 global X
 global Y
 X= 0
@@ -293,7 +294,8 @@ instructions="""Objective: Destroy the enemies to win
                           r-> right
                           l-> left
                           p-> plant bomb
-                        det-> detonate bomb"""
+                        space-> detonate bomb
+                          q -> quit"""
 
 gen_map()
 assign_player()
@@ -308,19 +310,18 @@ global done
 done=False
 
 while not done:
-    A=raw_input(" ")
-    if A=='u':
+    A=getch.getch()
+    if A=='w':
         u()
-    elif A=='d':
+    elif A=='s':
         d()
-    elif A=='l':
+    elif A=='a':
         l()
-    elif A=='r':
+    elif A=='d':
         r()
     elif A=='p':
         plant_bomb()
-        print 'Now move in any direction'
-    elif A=='det':
+    elif A==' ':
         detonate_bomb()
-    elif A=='quit':
+    elif A=='q':
         done=True
