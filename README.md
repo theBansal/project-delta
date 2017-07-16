@@ -5,4 +5,6 @@
                           r-> right
                           l-> left
                           p-> plant bomb
-                        det-> detonate bomb"""
+                        space-> detonate bomb
+                          q -> quit"""
+
