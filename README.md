@@ -8,3 +8,5 @@
                         space-> detonate bomb
                           q -> quit"""
 
+#packages used for python
+getch-1.0
